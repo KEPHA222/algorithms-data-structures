@@ -577,131 +577,159 @@
 ////////////////////////////////////////////////////////////////////////////
 // Linked List Class
 
-class Node {
-  constructor(value) {
-    this.value = value;
-    this.next = null;
-  }
-}
-class Linkedlist {
-  constructor() {
-    this.head = null;
-    this.size = 0;
-  }
+// class Node {
+//   constructor(value) {
+//     this.value = value;
+//     this.next = null;
+//   }
+// }
+// class Linkedlist {
+//   constructor() {
+//     this.head = null;
+//     this.size = 0;
+//   }
 
-  isEmpty() {
-    return this.size === 0;
-  }
+//   isEmpty() {
+//     return this.size === 0;
+//   }
 
-  getSize() {
-    return this.size;
-  }
+//   getSize() {
+//     return this.size;
+//   }
 
-  prepend(value) {
-    const node = new Node(value);
-    if (this.isEmpty()) {
-      this.head = node;
-    } else {
-      node.next = this.head;
-      this.head = node;
-    }
-    this.size++;
-  }
+//   prepend(value) {
+//     const node = new Node(value);
+//     if (this.isEmpty()) {
+//       this.head = node;
+//     } else {
+//       node.next = this.head;
+//       this.head = node;
+//     }
+//     this.size++;
+//   }
 
-  append(value) {
-    const node = new Node(value);
-    if (this.isEmpty()) {
-      this.head = node;
-    } else {
-      let prev = this.head;
-      while (prev.next) {
-        prev = prev.next;
-      }
-      prev.next = node;
-    }
-    this.size++;
-  }
+//   append(value) {
+//     const node = new Node(value);
+//     if (this.isEmpty()) {
+//       this.head = node;
+//     } else {
+//       let prev = this.head;
+//       while (prev.next) {
+//         prev = prev.next;
+//       }
+//       prev.next = node;
+//     }
+//     this.size++;
+//   }
 
-  insert(value, index) {
-    if (index < 0 || index > this.size) {
-      return;
-    }
-    if (index === 0) {
-      this.prepend(value);
-    } else {
-      const node = new Node(value);
-      let prev = this.head;
-      for (let i = 0; i < index - 1; i++) {
-        prev = prev.next;
-      }
-      node.next = prev.next;
-      prev.next = node;
-      this.size++;
-    }
-  }
+//   insert(value, index) {
+//     if (index < 0 || index > this.size) {
+//       return;
+//     }
+//     if (index === 0) {
+//       this.prepend(value);
+//     } else {
+//       const node = new Node(value);
+//       let prev = this.head;
+//       for (let i = 0; i < index - 1; i++) {
+//         prev = prev.next;
+//       }
+//       node.next = prev.next;
+//       prev.next = node;
+//       this.size++;
+//     }
+//   }
 
-  removeFrom(index) {
-    if (index < 0 || index >= this.size) {
-      return null;
-    }
-    let removedNode;
-    if (index === 0) {
-      removedNode = this.head;
-      this.head = this.head.next;
-    } else {
-      let prev = this.head;
-      for (let i = 0; i < index - 1; i++) {
-        prev = prev.next;
-      }
-      removedNode = prev.next;
-      prev.next = removedNode.next;
-    }
-    this.size--;
-    return removedNode.value;
-  }
+//   removeFrom(index) {
+//     if (index < 0 || index >= this.size) {
+//       return null;
+//     }
+//     let removedNode;
+//     if (index === 0) {
+//       removedNode = this.head;
+//       this.head = this.head.next;
+//     } else {
+//       let prev = this.head;
+//       for (let i = 0; i < index - 1; i++) {
+//         prev = prev.next;
+//       }
+//       removedNode = prev.next;
+//       prev.next = removedNode.next;
+//     }
+//     this.size--;
+//     return removedNode.value;
+//   }
 
-  removeValue(value) {
-    if (this.isEmpty()) {
-      return null;
-    }
-    if (this.head.value === value) {
-      this.head = this.head.next;
-      this.size--;
-      return value;
-    } else {
-      let prev = this.head;
-      while (prev.next && prev.next.value !== value) {
-        prev = prev.next;
-      }
-      if (prev.next) {
-        const removedNode = prev.next;
-        prev.next = removedNode.next;
-        this.size--;
-        return value;
-      }
-      return null;
-    }
-  }
+//   removeValue(value) {
+//     if (this.isEmpty()) {
+//       return null;
+//     }
+//     if (this.head.value === value) {
+//       this.head = this.head.next;
+//       this.size--;
+//       return value;
+//     } else {
+//       let prev = this.head;
+//       while (prev.next && prev.next.value !== value) {
+//         prev = prev.next;
+//       }
+//       if (prev.next) {
+//         const removedNode = prev.next;
+//         prev.next = removedNode.next;
+//         this.size--;
+//         return value;
+//       }
+//       return null;
+//     }
+//   }
 
-  print() {
-    if (this.isEmpty()) {
-      console.log("List is empty");
-    } else {
-      let curr = this.head;
-      let listValues = "";
-      while (curr) {
-        listValues += `${curr.value} `;
-        curr = curr.next;
-      }
-      console.log(listValues);
-    }
-  }
-}
+//   search(value) {
+//     if (this.isEmpty()) {
+//       return -1;
+//     }
+//     let i = 0;
+//     let curr = this.head;
+//     while (curr) {
+//       if (curr.value === value) {
+//         return i;
+//       }
+//       curr = curr.next;
+//       i++;
+//     }
+//     return -1;
+//   }
 
-const list = new Linkedlist();
-console.log("List is empty?", list.isEmpty());
-console.log("List size", list.getSize());
-list.print();
+//   reverse() {
+//     let prev = null;
+//     let curr = this.head;
+//     while (curr) {
+//       let next = curr.next;
+//       curr.next = prev;
+//       prev = curr;
+//       curr = next;
+//     }
+//     this.head = prev;
+//   }
+
+//   print() {
+//     if (this.isEmpty()) {
+//       console.log("List is empty");
+//     } else {
+//       let curr = this.head;
+//       let listValues = "";
+//       while (curr) {
+//         listValues += `${curr.value} `;
+//         curr = curr.next;
+//       }
+//       console.log(listValues);
+//     }
+//   }
+// }
+
+// const list = new Linkedlist();
+// console.log("List is empty?", list.isEmpty());
+// console.log("List size", list.getSize());
+// list.print();
 
 // list.append(10);
 // // list.prepend(10);
@@ -713,19 +741,19 @@ list.print();
 // // list.prepend(30);
 // list.print();
 
-list.insert(10, 0);
-list.print();
+// list.insert(10, 0);
+// list.print();
 
-list.insert(20, 0);
-list.print();
+// list.insert(20, 0);
+// list.print();
 
-list.insert(30, 1);
-list.print();
+// list.insert(30, 1);
+// list.print();
 
-list.insert(40, 2);
-list.print();
-console.log(list.getSize());
-console.log("List size", list.getSize());
+// list.insert(40, 2);
+// list.print();
+// console.log(list.getSize());
+// console.log("List size", list.getSize());
 
 // console.log(list.removeFrom(10));
 
@@ -736,12 +764,439 @@ console.log("List size", list.getSize());
 // list.print();
 // console.log(list.getSize());
 
-console.log(list.removeValue(40));
-list.print();
+// console.log(list.removeValue(40));
+// list.print();
 
-console.log(list.removeValue(20));
-list.print();
+// console.log(list.removeValue(20));
+// list.print();
 
-console.log(list.removeValue(60));
-list.print();
-console.log(list.getSize());
+// console.log(list.removeValue(60));
+// list.print();
+// console.log(list.getSize());
+
+// console.log(list.search(30));
+
+// const list = new Linkedlist();
+// console.log("List is empty? ", list.isEmpty());
+// console.log("List size", list.getSize());
+// list.print();
+
+// list.insert(10, 0);
+
+// list.insert(20, 0);
+
+// list.insert(30, 1);
+
+// list.insert(40, 2);
+// list.print();
+
+// list.reverse();
+// list.print();
+/////////////////////////////////////////////////////////////////////////////////
+// Linked List Stack
+
+// const LinkedList = require("./linked-list");
+
+// class LinkedListStack {
+//   constructor() {
+//     this.list = new LinkedList();
+//   }
+
+//   push(value) {
+//     this.list.prepend(value);
+//   }
+
+//   pop() {
+//     return this.list.removeFromFront();
+//   }
+
+//   peek() {
+//     return this.list.head.value;
+//   }
+
+//   isEmpty() {
+//     return this.list.isEmpty();
+//   }
+
+//   getSize() {
+//     return this.list.getSize();
+//   }
+
+//   print() {
+//     return this.list.print();
+//   }
+// }
+
+// const stack = new LinkedListStack();
+// console.log(stack.isEmpty());
+
+// stack.push(20);
+// stack.push(10);
+// stack.push(30);
+// console.log(stack.getSize());
+// stack.print();
+
+// console.log(stack.pop());
+// console.log(stack.peek());
+
+//////////////////////////////////////////////////////////////////////
+// Linked List Queue
+
+// const LinkedList = require("./linked-list");
+
+// class LinkedListQueue {
+//   constructor() {
+//     this.list = new LinkedList();
+//   }
+
+//   enqueue(value) {
+//     this.list.append(value);
+//   }
+
+//   dequeue() {
+//     return this.list.removeFromFront();
+//   }
+
+//   peek() {
+//     return this.list.head.value;
+//   }
+
+//   isEmpty() {
+//     return this.list.isEmpty();
+//   }
+
+//   getSize() {
+//     return this.list.getSize();
+//   }
+
+//   print() {
+//     return this.list.print();
+//   }
+// }
+
+// const queue = new LinkedListQueue();
+// console.log(queue.isEmpty());
+
+// queue.enqueue(10);
+// queue.enqueue(20);
+// queue.enqueue(30);
+// console.log(queue.getSize());
+// queue.print();
+
+// console.log(queue.dequeue());
+// queue.print();
+
+// console.log(queue.peek());
+
+////////////////////////////////////////////////////////////////////////////////// Hash Table Implementation
+
+// class HashTable {
+//   constructor(size) {
+//     this.table = new Array(size);
+//     this.size = size;
+//   }
+
+//   hash(key) {
+//     let total = 0;
+//     for (let i = 0; i < key.length; i++) {
+//       total += key.charCodeAt(i);
+//     }
+//     return total % this.size;
+//   }
+
+//   set(key, value) {
+//     const index = this.hash(key);
+//     // this.table[index] = value;
+//     const bucket = this.table[index];
+//     if (!bucket) {
+//       this.table[index] = [[key, value]];
+//     } else {
+//       const sameKeyItem = bucket.find((item) => item[0] === key);
+//       if (sameKeyItem) {
+//         sameKeyItem[1] = value;
+//       } else {
+//         bucket.push([key, value]);
+//       }
+//     }
+//   }
+
+//   get(key) {
+//     const index = this.hash(key);
+//     // return this.table[index];
+//     const bucket = this.table[index];
+//     if (bucket) {
+//       const sameKeyItem = bucket.find((item) => item[0] === key);
+//       if (sameKeyItem) {
+//         return sameKeyItem;
+//         return sameKeyItem[1];
+//       }
+//     }
+//     return undefined;
+//   }
+
+//   remove(key) {
+//     const index = this.hash(key);
+//     // this.table[index] = undefined;
+//     const bucket = this.table[index];
+//     if (bucket) {
+//       const sameKeyItem = bucket.find((item) => item[0] === key);
+//       if (sameKeyItem) {
+//         bucket.splice(bucket.indexOf(sameKeyItem), 1);
+//       }
+//     }
+//   }
+
+//   display() {
+//     for (let i = 0; i < this.table.length; i++) {
+//       if (this.table[i]) {
+//         console.log(i, this.table[i]);
+//       }
+//     }
+//   }
+// }
+// const table = new HashTable(50);
+
+// table.set("name", "Bruce");
+// table.set("age", 25);
+// table.display();
+
+// console.log(table.get("name"));
+
+// table.set("mane", "Kepha");
+// table.set("name", "Diana");
+// table.remove("name");
+// table.display();
+
+////////////////////////////////////////////////////////////////////////////BINARY SEARCH TREE Class
+
+// class Node {
+//   constructor(value) {
+//     this.value = value;
+//     this.left = null;
+//     this.right = null;
+//   }
+// }
+// class BinarySearchTree {
+//   constructor() {
+//     this.root = null;
+//   }
+
+//   isEmpty() {
+//     return this.root === null;
+//   }
+
+//   insert(value) {
+//     const newNode = new Node(value);
+//     if (this.isEmpty()) {
+//       this.root = newNode;
+//     } else {
+//       this.insertNode(this.root, newNode);
+//     }
+//   }
+
+//   insertNode(root, newNode) {
+//     if (newNode.value < root.value) {
+//       if (root.left === null) {
+//         root.left = newNode;
+//       } else {
+//         this.insertNode(root.left, newNode);
+//       }
+//     } else {
+//       if (root.right === null) {
+//         root.right = newNode;
+//       } else {
+//         this.insertNode(root.right, newNode);
+//       }
+//     }
+//   }
+
+//   search(root, value) {
+//     if (!root) {
+//       return false;
+//     } else {
+//       if (root.value === value) {
+//         return true;
+//       } else if (value < root.value) {
+//         return this.search(root.left, value);
+//       } else {
+//         return this.search(root.right, value);
+//       }
+//     }
+//   }
+
+//   preOrder(root) {
+//     if (root) {
+//       console.log(root.value);
+//       this.preOrder(root.left);
+//       this.preOrder(root.right);
+//     }
+//   }
+
+//   inOrder(root) {
+//     if (root) {
+//       this.inOrder(root.left);
+//       console.log(root.value);
+//       this.inOrder(root.right);
+//     }
+//   }
+
+//   postOrder(root) {
+//     if (root) {
+//       this.postOrder(root.left);
+//       this.postOrder(root.right);
+//       console.log(root.value);
+//     }
+//   }
+//   levelOrder() {
+//     //Use the optinized queue implementation
+//     const queue = [];
+//     queue.push(this.root);
+//     while (queue.length) {
+//       let curr = queue.shift();
+//       console.log(curr.value);
+//       if (curr.left) {
+//         queue.push(curr.left);
+//       }
+//       if (curr.right) {
+//         queue.push(curr.right);
+//       }
+//     }
+//   }
+//   min(root) {
+//     if (!root.left) {
+//       return root.value;
+//     } else {
+//       return this.min(root.left);
+//     }
+//   }
+
+//   max(root) {
+//     if (!root.right) {
+//       return root.value;
+//     } else {
+//       return this.max(root.right);
+//     }
+//   }
+
+//   delete(value) {
+//     this.root = this.deleteNode(this.root, value);
+//   }
+
+//   deleteNode(root, value) {
+//     if (root === null) {
+//       return root;
+//     }
+//     if (value < root.value) {
+//       root.left = this.deleteNode(root.left, value);
+//     } else if (value > root.value) {
+//       root.right = this.deleteNode(root.right, value);
+//     } else {
+//       if (!root.left && !root.right) {
+//         return null;
+//       }
+//       if (!root.left) {
+//         return root.right;
+//       } else if (!root.right) {
+//         return root.left;
+//       }
+
+//       root.value = this.min(root.right);
+//       root.right - this.deleteNode(root.right, root.value);
+//     }
+//     return root;
+//   }
+// }
+
+// const bst = new BinarySearchTree();
+// console.log("Tree is empty? ", bst.isEmpty());
+
+// bst.insert(10);
+// bst.insert(5);
+// bst.insert(15);
+// bst.insert(3);
+// bst.insert(7);
+
+// console.log(bst.search(bst.root, 10));
+// console.log(bst.search(bst.root, 5));
+// console.log(bst.search(bst.root, 15));
+// console.log(bst.search(bst.root, 5));
+
+// // bst.preOrder(bst.root);
+// // bst.inOrder(bst.root);
+// // bst.postOrder(bst.root);
+// // bst.levelOrder();
+
+// console.log(bst.min(bst.root));
+// console.log(bst.max(bst.root));
+
+//bst.levelOrder();
+
+// bst.delete(10);
+// bst.levelOrder();
+/////////////////////////////////////////////////////////////
+// Graph Add Vertex and Edge
+
+class Graph {
+  constructor() {
+    this.adjacencyList = {};
+  }
+  addVertex(vertex) {
+    if (!this.adjacencyList[vertex]) {
+      this.adjacencyList[vertex] = new Set();
+    }
+  }
+
+  addEdge(vertex1, vertex2) {
+    if (!this.adjacencyList[vertex1]) {
+      this.addVertex(vertex1);
+    }
+    if (!this.adjacencyList[vertex2]) {
+      this.addVertex(vertex2);
+    }
+    this.adjacencyList[vertex1].add(vertex2);
+    this.adjacencyList[vertex2].add(vertex1);
+  }
+
+  removeEdge(vertex1, vertex2) {
+    this.adjacencyList[vertex1].delete(vertex2);
+    this.adjacencyList[vertex2].delete(vertex1);
+  }
+
+  removeVertex(vertex) {
+    if (!this.adjacencyList[vertex]) {
+      return;
+    }
+    for (let adjacentVertex of this.adjacencyList[vertex]) {
+      this.removeEdge(vertex, adjacentVertex);
+    }
+    delete this.adjacencyList[vertex];
+  }
+
+  hasEdge(vertex1, vertex2) {
+    return (
+      this.adjacencyList[vertex1].has(vertex2) &&
+      this.adjacencyList[vertex1].has(vertex2)
+    );
+  }
+
+  display() {
+    for (let vertex in this.adjacencyList) {
+      console.log(vertex + "->" + [...this.adjacencyList[vertex]]);
+    }
+  }
+}
+
+const graph = new Graph();
+graph.addVertex("A");
+graph.addVertex("B");
+graph.addVertex("C");
+
+graph.addEdge("A", "B");
+graph.addEdge("B", "C");
+
+graph.display();
+console.log(graph.hasEdge("A", "c"));
+
+// graph.removeEdge("A", "B");
+graph.removeVertex("B");
+graph.display();
