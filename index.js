@@ -1,4 +1,4 @@
-// ALGORITHMS
+// (1) ALGORITHMS
 
 // BIG-O GUIDE
 // Calculation not dependent on input size-O(1)
@@ -20,7 +20,7 @@
 // console.log(fibonacci(2));
 // console.log(fibonacci(3));
 // console.log(fibonacci(7));
-
+////////////////////////////////////////////////////////////////////////////////////////////////////
 // // PROBLEM: Given an integer 'n', find the factorial of that integer
 // function factorial(n) {
 //   let result = 1;
@@ -33,7 +33,7 @@
 // console.log(factorial(0));
 // console.log(factorial(1));
 // console.log(factorial(5));
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////
 // // PROBLEM: Given a natural number 'n', determine if the number is prime or not
 // function isPrime(n) {
 //   if (n < 2) {
@@ -50,7 +50,7 @@
 // console.log(isPrime(1)); // false
 // console.log(isPrime(5)); // true
 // console.log(isPrime(4)); // false
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////
 // PROBLEM: Given a positive integer 'n', determine if the number is a power of 2 or not
 // function isPowerOfTwo(n) {
 //   if (n < 1) {
@@ -73,7 +73,7 @@
 // console.log(isPowerOfTwo(1));
 // console.log(isPowerOfTwo(4));
 // console.log(isPowerOfTwo(5));
-
+///////////////////////////////////////////////////////////////////////////////////////////////////
 //  RECURSIVE FIBONACCI
 // PROBLEM: Given a number 'n', find the nth element of the Fibonacci sequence
 
@@ -100,7 +100,7 @@
 // console.log(recursiveFactorial(0));
 // console.log(recursiveFactorial(1));
 // console.log(recursiveFactorial(5));
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Linear Search
 // Problem: Given an arrayof 'n' elements and a target element 't', find the index of 't' in yje array. Return -1 if the tartget element is not found
 // function linearSearch(arr, target) {
@@ -115,7 +115,7 @@
 // console.log(linearSearch([-5, 2, 10, 4, 6], 10)); //2
 // console.log(linearSearch([-5, 2, 10, 4, 6], 6)); //4
 // console.log(linearSearch([-5, 2, 10, 4, 6], 20)); //-1
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Binary search
 // Problem: Given a sorted array of 'n' elements and a target element 't', find the index of 't' in the array. Return -1 if the target element is not found
 // function binarySearch(arr, target) {
@@ -139,7 +139,7 @@
 // console.log(binarySearch([-5, 2, 4, 6, 10], 10)); //4
 // console.log(binarySearch([-5, 2, 4, 6, 10], 6)); //3
 // console.log(binarySearch([-5, 2, 4, 6, 10], 20)); //-1
-
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Recursive Binary Search
 // Problem: Given a sorted array of 'n' elements and a target element 't', find the index of 't' in the array. Return -1 if the target element is not found
 
@@ -166,7 +166,7 @@
 // console.log(recursiveBinarySearch([-5, 2, 4, 6, 10], 10));
 // console.log(recursiveBinarySearch([-5, 2, 4, 6, 10], 6));
 // console.log(recursiveBinarySearch([-5, 2, 4, 6, 10], 20));
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //SORTING ALGORITHMS (TURNKEY QUESTIOON)
 // Bubble Sort
 //Problem: Given an array of integers, sort the array in ascending order
@@ -187,7 +187,7 @@
 // const arr = [8, 20, -2, 4, -6];
 // bubbleSort(arr);
 // console.log(arr); //[-6, -2, 4, 8, 20];
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Bubble Sort (TURNKEY QUESTIOON)
 //Problem: Given an array of integers, sort the array in ascending order
 // function bubbleSort(arr) {
@@ -226,7 +226,7 @@
 // const arr = [8, 20, -2, 4, -6];
 // insertionSort(arr);
 // console.log(arr); //[-6, -2, 4, 8, 20]
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //QUICK SORT
 // Problem: Given an array of integers, sort the array
 // function quickSort(arr) {
@@ -248,7 +248,7 @@
 
 // const arr = [8, 20, -2, 4, -6];
 // console.log(quickSort(arr)); //[-6,-2,4,8,20]
-
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //MERGE SORT
 // Problem: Given an array of integers, sort the array
 // function mergeSort(arr) {
@@ -275,7 +275,7 @@
 
 // const arr = [8, 20, -2, 4, -6];
 // console.log(mergeSort(arr)); //[-6, -2, 4, 8, 20]
-
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Cartesian product
 //Problem: Given two finite non-empty sets, find their Cartesian Product
 // function cartesianProduct(arr1, arr2) {
@@ -291,7 +291,7 @@
 // const arr1 = [1, 2];
 // const arr2 = [3, 4, 5];
 // console.log(cartesianProduct(arr1, arr2)); //[[1,3],[1,4],[1,5],[2,3],[2,4],[2,5]]
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Climbing Staircase Solution
 // function climbingStaircase(n) {
 //   const noOfWays = [1, 2];
@@ -306,7 +306,7 @@
 // console.log(climbingStaircase(3));
 // console.log(climbingStaircase(4));
 // console.log(climbingStaircase(5));
-
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Tower of Hanoi
 // Th objective of the puzzle is to move the entire stack to the last rod, obeying the following rules:
 // a) Only one disk may be moved at a time
@@ -323,8 +323,8 @@
 //   towerOfHanoi(n - 1, usingRod, toRod, fromRod);
 // }
 // towerOfHanoi(3, "A", "C", "B");
-
-// DATA STRUCTURES
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// (2) DATA STRUCTURES
 //SET
 // const set = new Set([1, 2, 3]);
 // set.add(4);
@@ -336,8 +336,9 @@
 // for (const item of set) {
 //   console.log(item);
 // }
-///////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////
 //MAP
+
 // const map = new Map([
 //   ["a", 1],
 //   ["b", 2],
@@ -352,8 +353,9 @@
 //   console.log(`${key}: ${value}`);
 // }
 
-///////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////
 //STACK
+
 // class Stack {
 //   constructor() {
 //     this.items = [];
@@ -395,7 +397,7 @@
 
 // console.log(stack.pop());
 // console.log(stack.peek());
-/////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////
 //  QUEUE Implementation
 // class Queue {
 //   constructor() {
@@ -441,7 +443,7 @@
 
 // console.log(queue.dequeue());
 // console.log(queue.peek());
-//////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////
 //  QUEUE Implementation Optimized
 // class Queue {
 //   constructor() {
@@ -490,7 +492,7 @@
 // console.log(queue.dequeue());
 // console.log(queue.peek());
 
-///////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////
 //Circular Queue Implementation
 
 // class CircularQueue {
@@ -574,7 +576,7 @@
 // queue.print();
 // queue.enqueue(60);
 // queue.print();
-////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////
 // Linked List Class
 
 // class Node {
@@ -792,7 +794,7 @@
 
 // list.reverse();
 // list.print();
-/////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////
 // Linked List Stack
 
 // const LinkedList = require("./linked-list");
@@ -839,7 +841,7 @@
 // console.log(stack.pop());
 // console.log(stack.peek());
 
-//////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////
 // Linked List Queue
 
 // const LinkedList = require("./linked-list");
@@ -888,7 +890,8 @@
 
 // console.log(queue.peek());
 
-////////////////////////////////////////////////////////////////////////////////// Hash Table Implementation
+////////////////////////////////////////////////////////////////////////////////////////////////
+//Hash Table Implementation
 
 // class HashTable {
 //   constructor(size) {
@@ -967,7 +970,8 @@
 // table.remove("name");
 // table.display();
 
-////////////////////////////////////////////////////////////////////////////BINARY SEARCH TREE Class
+////////////////////////////////////////////////////////////////////////////////////////////
+//BINARY SEARCH TREE Class
 
 // class Node {
 //   constructor(value) {
@@ -1133,7 +1137,7 @@
 
 // bst.delete(10);
 // bst.levelOrder();
-/////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////
 // Graph Add Vertex and Edge
 
 class Graph {
