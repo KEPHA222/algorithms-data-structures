@@ -167,7 +167,7 @@
 // console.log(recursiveBinarySearch([-5, 2, 4, 6, 10], 6));
 // console.log(recursiveBinarySearch([-5, 2, 4, 6, 10], 20));
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//SORTING ALGORITHMS (TURNKEY QUESTIOON)
+//SORTING ALGORITHMS (QUESTIOON)
 // Bubble Sort
 //Problem: Given an array of integers, sort the array in ascending order
 // function bubbleSort(arr) {
@@ -188,7 +188,7 @@
 // bubbleSort(arr);
 // console.log(arr); //[-6, -2, 4, 8, 20];
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Bubble Sort (TURNKEY QUESTIOON)
+// Bubble Sort ( QUESTIOON)
 //Problem: Given an array of integers, sort the array in ascending order
 // function bubbleSort(arr) {
 //   let swapped;
